@@ -30,7 +30,7 @@ For more details or to use the Blood Pressure History Tracker, visit arprovat.co
 Clone the project
 
 ```bash
-  git clone https://github.com/Provat-14/DorjoyPortfolio.git
+  git clone https://github.com/Provat-14/Blood_Pressure_Tracker
 ```
 
 Go to the project directory
