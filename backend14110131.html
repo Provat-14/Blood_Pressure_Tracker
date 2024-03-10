@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- =================Script written by DProvat.===================== -->
+<!-- Please contact us if there are any errors or problems with usage. https://arprovat.com/  -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta property="og:image" content="https://www.arprovat.com/assets/img/profile1.png"/>
+  <meta name="author" content="Ashikur Rahman Provat">
+
+  <title>Update Blood Pressure || Blood Pressure Tracker</title>
+
+  <!-- =========CDN for jQuery ======== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+<body>
+  <h1>Blood Pressure Tracker</h1>
+  <form id="pressureForm">
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required><br>
+
+    <label for="systolic">Systolic (mmHg):</label>
+    <input type="number" id="systolic" name="systolic" required><br>
+
+    <label for="diastolic">Diastolic (mmHg):</label>
+    <input type="number" id="diastolic" name="diastolic" required><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- <div id="chartContainer"></div> -->
+
+  <!-- =============== developer credite ================= -->
+  <!----------- you can change without permission------------>
+  <p style="text-align: center; margin-top:10px">
+    © Copyright All Rights Reserved <br> Development and Maintenance by 
+    <!-- replace a tag data with your name -->
+    <a href="https://arprovat.com" target="_blank" rel="noopener noreferrer" style="color:#ABB2B9; text-decoration: none;">Ashikur Rahman Provat</a>
+  </p>
+  
+  <script>
+    $(document).ready(function() {
+      $("#pressureForm").submit(function(event) {
+        // Prevent default form submission behavior
+        event.preventDefault();
+
+        // Get form data
+        var data = {
+          date: $("#date").val(),
+          time: $("#time").val(),
+          systolic: $("#systolic").val(),
+          diastolic: $("#diastolic").val()
+        };
+
+        // Send data using AJAX
+        $.ajax({
+          url: "record.php", 
+          type: "POST",
+          data: data,
+          success: function(response) {
+            console.log("Data sent successfully:", response);
+            // You can update the chart or display a success message here
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error sending data:", textStatus, errorThrown);
+            // You can display an error message to the user here
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
+
