@@ -44,7 +44,7 @@ Go to the project directory
 ## How to run
 - you must be need php supported server .
 - then clone project in root  folder
-`db.sql` file insert in database and collect database details.
+`blood_pressure.sql` file insert in database and collect database details.
 then edit php files with your database details.
 
 
