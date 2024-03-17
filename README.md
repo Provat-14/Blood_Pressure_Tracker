@@ -58,5 +58,5 @@ $dbname = "Your_DataBase_Name";
 ## Contact
 
 ![Logo](https://arprovat.com/assets/img/favicon.ico)
-If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/Provat-14/php_mail_function/issues/new)
+If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/Provat-14/Blood_Pressure_Tracker/issues/new)
  on GitHub.
